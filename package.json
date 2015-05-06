@@ -1,0 +1,14 @@
+{
+  "name"         : "smart-home",
+  "version"      : "0.0.1",
+  "description"  : "SmartHome WebApp.",
+  "main"         : "main.js",
+  "author"       : "Jig Sheth",
+  "dependencies" : {
+    "express"    : "*",
+    "express-session": "*",
+    "request": "*",
+    "morgan"     : "*",
+    "body-parser": "*"
+    }
+}

@@ -1,0 +1,44 @@
+<div ng-controller="DeviceListController">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<h2>Smarthome</h2>
+				<hr />
+			</div>
+		</div>
+		<div class="row" ng-show="message">
+			<div class="col-md-10">
+				<div class="alert alert-info" role="alert">{{message}}</div>
+			</div>
+		</div>
+		<div class="row" ng-show="error">
+			<div class="col-md-10">
+				<div class="alert alert-danger" role="alert">{{error}}</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-10">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>House ID</th>
+							<th>Device ID</th>
+							<th>Device Name</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Display each entry in a row -->
+						<tr ng-repeat="device in devices">
+							<td>{{device.HouseID}}</td>
+							<td>{{device.DeviceID}}</td>
+							<td>{{device.DeviceName}}</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div ng-include src="'/partials/footer.html'"></div>
+	</div>
+</div>
